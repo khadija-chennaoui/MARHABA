@@ -1,4 +1,4 @@
-          __Docker Compose__    
+   ____ Docker Compose ____    
 1_ Crée "dockerfile" de partie backend :
 
         FROM node:16
@@ -38,6 +38,7 @@
     docker system prune -a
 
 ____ Test Unitaire____
+
 1_ installe jest :
 
     npm i jest
@@ -80,4 +81,4 @@ ____ Test Unitaire____
         })
     })
 
-})
+    })
