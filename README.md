@@ -1,5 +1,4 @@
-          __Docker Compose__
-
+          __Docker Compose__    
 1_ Crée "dockerfile" de partie backend :
         FROM node:16
         WORKDIR /app
