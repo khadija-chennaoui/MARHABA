@@ -21,7 +21,7 @@ const auth = require('./middelware/auth')
 
 // Route
 app.use('/api/auth',route) 
-app.get('/api/user', auth.VerfyToken, (req, res)=>{
+app.get('/api/user', auth.VerfyToken, (req,res)=>{
 
   const token = storage('token');
   const user = jwt.verify(token, process.env.SUCRET)
@@ -51,3 +51,4 @@ db.then(() => {
 
 const port = process.env.PORT
 app.listen(port)
+module.exports = app

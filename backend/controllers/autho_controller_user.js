@@ -76,7 +76,7 @@ const login =(req,res) =>{
     user.findOne({email:body.email})
     .then(e=>{
         if(!e){
-            return res.send({message:'email incorrect'})
+            return res.status(400).send({message:'email incorrect'})
         }
         else{ 
              // Checking if the password incorrect compare password
@@ -84,7 +84,7 @@ const login =(req,res) =>{
             bcrypt.compare(body.password,e.password)
             .then(valid =>{
                 if(!valid){
-                    return res.send({message:'password incorrect'})
+                    return res.status(400).send({message:'password incorrect'})
                 }
                 else {
                     const user=e
